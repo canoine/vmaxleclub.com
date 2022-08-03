@@ -1,0 +1,330 @@
+div.container {
+	min-height: 802px;
+}
+div.bloc_donnees_transparent {
+	text-align: center;
+	margin: 0 auto;
+	border: 0px;
+	display: flex;
+	width: 90%;
+	min-width: 650px;
+	max-width: 980px;
+	height: 100%;
+}
+div.bloc_donnees_gris {
+	text-align: left;
+	height: 77px;
+	margin: 0 auto;
+	border-radius: 7px;
+	border: 0px;
+	box-shadow: 1px 1px 12px #000000;
+	background-color: #d3cfbd;
+}
+div.bloc_donnees1 {
+	min-width: 680px;
+	top: 275px;
+	height: 150px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.donnees1_gauche {
+	text-align: left;
+	position: relative;
+	top: 5px;
+}
+div.donnees1_droite {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-left: 5px;
+	top: 5px;
+}
+div.donnees1_droite_contour {
+	text-align: center;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: 1px 1px 12px #000000;
+	border: 1px solid #cecbbc;
+	width: 100%;
+	height: 143px;
+}
+div.donnees1_droite_titre {
+	position: relative;
+	z-index: 20088;
+	padding: 5px;
+	top: 15px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+div.donnees1_droite_rezos {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 20088;
+	padding: 5px;
+	top: 5px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+div.donnees1_droite_rezos_icones {
+	position: relative;
+	z-index: 20088;
+	top: 5px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+div.bloc_donnees2 {
+	min-width: 680px;
+	top: 425px;
+	height: 80px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.donnees2_gauche {
+	text-align: left;
+	width: 90%;
+	position: relative;
+	left: 0px;
+	top: 5px;
+}
+div.donnees2_gauche_contour {
+	text-align: left;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: 1px 1px 12px #000000;
+	border: 1px solid #cecbbc;
+	width: 100%;
+	height: 77px;
+}
+div.donnees2_gauche_forum {
+	position: relative;
+	z-index: 20088;
+	margin-left: 28%;
+	top: -25px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+div.donnees2_droite {
+	text-align: left;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-left: 5px;
+	top: 5px;
+}
+div.donnees2_droite_boutique {
+	position: relative;
+	z-index: 20088;
+	margin-left: 25%;
+	top: -20px;
+	border: 0px;
+	text-align: left;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #111111;
+}
+div.bloc_donnees3 {
+	min-width: 680px;
+	top: 510px;
+	height: 80px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.donnees3_gauche {
+	text-align: center;
+	width: 70%;
+	position: relative;
+	height: 100%;
+	top: 5px;
+}
+div.donnees3_gauche_adherer {
+	position: relative;
+	z-index: 20088;
+	margin-left: 30%;
+	top: -25px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #111111;
+}
+div.donnees3_droite{
+	text-align: center;
+	width: 90%;
+	position: relative;
+	padding-left: 5px;
+	top: 5px;
+}
+div.donnees3_droite_contour {
+	text-align: left;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: 1px 1px 12px #000000;
+	border: 1px solid #cecbbc;
+	width: 100%;
+	height: 77px;
+}
+div.donnees3_droite_archives {
+	position: relative;
+	z-index: 20088;
+	margin-left: 22%;
+	top: -26px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+div.bloc_donnees4 {
+	min-width: 680px;
+	top: 595px;
+	height: 80px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.donnees4_gauche {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 5px;
+}
+div.donnees4_gauche_contour {
+	text-align: center;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: 1px 1px 12px #000000;
+	border: 1px solid #cecbbc;
+	width: 100%;
+	height: 143px;
+}
+div.donnees4_droite {
+	text-align: left;
+	position: relative;
+	padding-left: 5px;
+	top: 5px;
+}
+
+span.donnees1_titre {
+	position: relative;
+	z-index: 20088;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 20px;
+	font-weight: bold;
+	color: #111111;
+}
+span.donnees1_droite_rezos_noms {
+	position: relative;
+	z-index: 20088;
+	padding: 5px;
+	top: 20px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+}
+span.donnees4_gauche_calendrier_titre {
+	position: relative;
+	z-index: 20088;
+	padding: 5px;
+	top: 25px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+span.donnees4_gauche_calendrier_message {
+	position: relative;
+	z-index: 20088;
+	padding: 5px;
+	top: 20px;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+img.donnees3_droite_archives {
+	position: relative;
+	z-index: 20088;
+	margin-left: 6%;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	border: 0px;
+}
+img.donnees4_gauche_calendrier {
+	position: relative;
+	z-index: 20088;
+	top: 17px;
+	width: 40px;
+	height: 39px;
+	border: 0px;
+}
+
+a.donnees1_droite_rezos_icones {
+	position: relative;
+	z-index: 20088;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	border: 0px;
+}
+a.donnees2_gauche_forum {
+	position: relative;
+	z-index: 20088;
+	margin-left: 10%;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	border: 0px;
+}
+a.donnees2_droite_boutique {
+	position: relative;
+	z-index: 20088;
+	margin-left: 8%;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	border: 0px;
+}
+a.donnees3_gauche_adherer {
+	position: relative;
+	z-index: 20088;
+	margin-left: 8%;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	border: 0px;
+}

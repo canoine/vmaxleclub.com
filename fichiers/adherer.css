@@ -1,0 +1,223 @@
+div.bloc_cotisation {
+	min-width: 680px;
+	top: 490px;
+	height: 200px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.bloc_cotisation_gris {
+	display: flex;
+	width: 90%;
+	min-width: 650px;
+	max-width: 980px;
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 7px;
+	border: 0px;
+	box-shadow: 1px 1px 12px #000000;
+	background-color: #d3cfbd;
+}
+div.cotisation {
+	text-align: center;
+	position: relative;
+	z-index: 20100;
+	top: 50px;
+	height: 60px;
+	width: 560px;
+	border: 0px;
+	margin: 0 auto;
+}
+div.bloc_donnees {
+	min-width: 680px;
+	top: 170px;
+	height: 300px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.bloc_donnees_gris {
+	width: 90%;
+	min-width: 650px;
+	max-width: 980px;
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 7px;
+	border: 0px;
+	box-shadow: 1px 1px 12px #000000;
+	background-color: #d3cfbd;
+}
+div.donnees_titre {
+	text-align: center;
+	position: relative;
+	z-index: 20100;
+	top: 50px;
+	height: 60px;
+	width: 560px;
+	border: 0px;
+	margin: 0 auto;
+}
+div.bloc_formulaire {
+	min-width: 680px;
+	top: 170px;
+	height: 635px;
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+div.bloc_formulaire_gris {
+	width: 90%;
+	min-width: 650px;
+	max-width: 980px;
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 7px;
+	border: 0px;
+	box-shadow: 1px 1px 12px #000000;
+	background-color: #d3cfbd;
+}
+div.formulaire_titre {
+	text-align: center;
+	position: relative;
+	z-index: 20100;
+	top: 16px;
+	width: 560px;
+	border: 0px;
+	margin: 0 auto;
+}
+div.formulaire_bouton_envoi {
+	position: relative;
+	width: 100px;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 auto;
+}
+div.formulaire_champ_adresse {
+	text-align: center;
+	height: 75px;
+}
+div.formulaire_champ_ri {
+	text-align: center;
+	height: 38px;
+}
+div.formulaire_champ_texte {
+	text-align: center;
+	height: 35px;
+}
+div.formulaire_champ_vmax {
+	text-align: center;
+	height: 50px;
+}
+
+span.donnees_message {
+	position: relative;
+	z-index: 20088;
+	border: 0px;
+	top: 80px;
+	font-family: 'Arial';
+	font-size: 16px;
+	font-weight: bold;
+	color: #111111;
+}
+span.donnees_erreurs {
+	position: relative;
+	z-index: 20088;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 18px;
+	font-weight: bold;
+	color: #441111;
+}
+span.cotisation, span.donnees_titre {
+	position: relative;
+	z-index: 20088;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 20px;
+	font-weight: bold;
+	color: #111111;
+}
+span.formulaire_titre {
+	position: relative;
+	z-index: 20088;
+	border: 0px;
+	font-family: 'Arial';
+	font-size: 24px;
+	font-weight: bold;
+	color:#111111;
+}
+span.formulaire_champ_pseudo {
+	position: absolute;
+	left: 0px;
+	width: 174px;
+	height: 24px;
+	line-height: 14px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+	color: #666647;
+	font-family: 'Arial';
+}
+span.formulaire_champ_ri {
+	position: absolute;
+	left: 120px;
+	width: 430px;
+	height: 24px;
+	line-height: 14px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 12px;
+	color: #666647;
+	font-family: 'Arial';
+}
+span.formulaire_champ_texte {
+	position: absolute;
+	left: 0px;
+	width: 174px;
+	height: 24px;
+	line-height: 24px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+	color: #666647;
+	font-family: 'Arial';
+}
+
+textarea.formulaire_champ_adresse {
+	position: absolute;
+	left: 190px;
+	width: 340px;
+	height: 50px;
+}
+
+select.formulaire_champ_vmax {
+	position: absolute;
+	left: 190px;
+	width: 240px;
+}
+
+input.formulaire_champ_ri {
+	position: absolute;
+	left: 92px;
+	height: 15px;
+}
+input.formulaire_champ_texte {
+	position: absolute;
+	left: 190px;
+	height: 15px;
+	width: 340px;
+}
+
+a.retour {
+	font-family: 'Arial';
+	font-size: 14px;
+	font-weight: bold;
+	color: #111111;
+}
