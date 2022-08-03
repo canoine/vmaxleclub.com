@@ -130,7 +130,7 @@ if(isset($_POST['envoi_mail'])) {
 		<link type="text/css" rel="stylesheet" href="/fichiers/css.css" />
 		<link type="text/css" rel="stylesheet" href="/fichiers/adherer.css" />
 
-		<style type="text/css" nonce="adheYeyi8llAXPD4">
+		<style nonce="adheJZ4Z0FexMGWR5QapLkFCw7gUlzAW">
 			div.container {
 				min-height: 802px;
 			}
@@ -182,15 +182,17 @@ if(isset($_POST['envoi_mail'])) {
 			<div class="bloc_bas_page">
 				<div class="bloc_bas_page_gris">
 					<span class="bas_page">
-						Vmax le Club - Association loi 1901
+						Vmax le Club
+						-
+						Association loi 1901
 						-
 						<a href="/contact-club-vmax.html">Contact</a>
 						-
-						<a href="/mentions-legales.html">Mentions légales</a>
+						<a href="/mentions-legales.html">Mentions l&eacute;gales</a>
 					</span>
 				</div>
 			</div>
-			<!-- Bas de page forcé -->
+			<!-- Bas de page forc&eacute; -->
 			<div class="bas_page">
 				<a>&nbsp;</a>
 			</div>

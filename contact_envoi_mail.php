@@ -20,7 +20,7 @@ if(isset($_POST['envoi_mail'])) {
 		$error_message .= 'Vous devez indiquer votre adresse email.<br />';
     }
     if(empty($_POST['message'])) {
-		$error_message .= 'Vous n’avez rien à dire ?<br />';
+		$error_message .= 'Vous n’avez rien &agrave; dire ?<br />';
     }
 
 	if(empty($error_message)) {
@@ -32,7 +32,6 @@ if(isset($_POST['envoi_mail'])) {
 		$emessage		= $_POST['message'];
 
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-		//$string_exp = "/^[A-Za-z .'-]+$/";
 		$string_exp = "/^[\pL\pM\p{Zs}.-]+$/u";
 		$number_exp = "/^[0-9]+$/";
 		$tel_exp = "/^\+?[0-9]+$/";
@@ -56,8 +55,8 @@ if(isset($_POST['envoi_mail'])) {
 				return str_replace($bad,"",$string);
 			}
 
-			$email_message  = "Bonjour,\n\nCoordonnées fournies par le demandeur :\n\n";
-			$email_message .= "Prénom : ".clean_string($prenom)."\n";
+			$email_message  = "Bonjour,\n\nCoordonn&eacute;es fournies par le demandeur :\n\n";
+			$email_message .= "Pr&eacute;nom : ".clean_string($prenom)."\n";
 			$email_message .= "--\n";
 			$email_message .= "Message : ".clean_string($emessage)."\n";
 
@@ -78,15 +77,15 @@ if(isset($_POST['envoi_mail'])) {
 <html lang="fr">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Vmax Le Club, club dédié aux Yamaha 1200 et 1700 Vmax. Retrouvez ici toutes les informations sur la moto et le club : forum, activités, sorties, entretien mécanique, accessoires, etc." />
-		<meta name="abstract" content="Vmax Le Club, Vmax, Yamaha, Vmax 1200, Vmax 1700, club Vmax, balades, groupes de passionnés de vmax, Vmax 2009 new Vmax, Yamaha Vmax, goodies, calendrier de activités, articles vmax, galerie photos de la vmax, meeting vmax, concentration, vmax, tutoriels vmax" />
+		<meta name="description" content="Vmax Le Club, club d&eacute;di&eacute; aux Yamaha 1200 et 1700 Vmax. Retrouvez ici toutes les informations sur la moto et le club : forum, activit&eacute;s, sorties, entretien m&eacute;canique, accessoires, etc." />
+		<meta name="abstract" content="Vmax Le Club, Vmax, Yamaha, Vmax 1200, Vmax 1700, club Vmax, balades, groupes de passionn&eacute;s de vmax, Vmax 2009 new Vmax, Yamaha Vmax, goodies, calendrier de activit&eacute;s, articles vmax, galerie photos de la vmax, meeting vmax, concentration, vmax, tutoriels vmax" />
 		<meta name="reply-to" content="contact@vmaxleclub.com" />
 
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link type="text/css" rel="stylesheet" href="/fichiers/css.css" />
 		<link type="text/css" rel="stylesheet" href="/fichiers/adherer.css" />
 
-		<style type="text/css" nonce="cont7Loh7B1WF38Y">
+		<style nonce="contsq27yAOIvW5T4uRjMcUoHdFzTFCX">
 			div.container {
 				min-height: 802px;
 			}
@@ -115,7 +114,7 @@ if(isset($_POST['envoi_mail'])) {
 				</div>
 			</div>
 
-			<!-- Bloc Données -->
+			<!-- Bloc Donn&eacute;es -->
 			<div class="bloc_donnees">
 				<div class="bloc_donnees_gris">
 					<div class="donnees_titre">
@@ -128,7 +127,7 @@ if(isset($_POST['envoi_mail'])) {
 								echo nl2br($error_message);
 							?>
 							<br /><br />
-							<a href="./" class="retour">Retour à l'accueil</a>
+							<a href="./" class="retour">Retour &agrave; l’accueil</a>
 						</span>
 					</div>
 				</div>
@@ -138,19 +137,20 @@ if(isset($_POST['envoi_mail'])) {
 			<div class="bloc_bas_page">
 				<div class="bloc_bas_page_gris">
 					<span class="bas_page">
-						Vmax le Club - Association loi 1901
+						Vmax le Club
+						-
+						Association loi 1901
 						-
 						<a href="/contact-club-vmax.html">Contact</a>
 						-
-						<a href="/mentions-legales.html">Mentions légales</a>
+						<a href="/mentions-legales.html">Mentions l&eacute;gales</a>
 					</span>
 				</div>
 			</div>
-			<!-- Bas de page forcé -->
+			<!-- Bas de page forc&eacute; -->
 			<div class="bas_page">
 				<a>&nbsp;</a>
 			</div>
 		</div>
 	</body>
-</html>
 </html>
