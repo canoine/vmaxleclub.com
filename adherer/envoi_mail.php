@@ -4,14 +4,17 @@ $error_message = "Aucune donn&eacute;e re&ccedil;ue.
 Veuillez remplir le formulaire en cliquant sur le lien ci-dessous.";
 
 if(isset($_POST['envoi_mail'])) {
-
     $email_to = "bureau@vmaxleclub.com";
     $email_from = "contact@vmaxleclub.com";
     $email_subject = "[Vmax le Club] Nouvelle demande d'adhésion";
-
 	$error_message = "";
 
-    // validation expected data exists
+    // Champ non vide -> robot -> poubelle
+    if(!empty($_POST['pg_email'])) {
+		header('Location: /');
+		die();
+    }
+    // Sinon, champ vide -> pas bien
     if(empty($_POST['nom'])) {
 		$error_message .= 'Vous devez indiquer votre nom.<br />';
     }
@@ -39,7 +42,6 @@ if(isset($_POST['envoi_mail'])) {
     }
 
 	if(empty($error_message)) {
-
 		// On a tous les champs voulus
 		$nom			= $_POST['nom'];
 		$prenom 		= $_POST['prenom'];
@@ -54,28 +56,24 @@ if(isset($_POST['envoi_mail'])) {
 		$vmax			= $_POST['vmax'];
 		$accept_RI		= $_POST['accept_RI'];
 
+		// Quelques tests de forme
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-		//$string_exp = "/^[A-Za-z .'-]+$/";
 		$string_exp = "/^[\pL\pM\p{Zs}.-]+$/u";
 		$number_exp = "/^[0-9]+$/";
 		$tel_exp = "/^\+?[0-9]+$/";
 
-		// Quelques tests de forme
 		if(!preg_match($email_exp,$email)) {
 			$error_message .= 'Votre adresse email semble invalide.<br />';
 		}
-
 		if(!preg_match($string_exp,$nom)) {
 			$error_message .= 'Votre nom semble invalide.<br />';
 		}
 		if(!preg_match($string_exp,$prenom)) {
 			$error_message .= 'Votre pr&eacute;nom semble invalide.<br />';
 		}
-
 		if(!preg_match($number_exp,$code_postal)) {
 			$error_message .= 'Votre code postal semble invalide.<br />';
 		}
-
 		if(!empty($_POST['tel_fixe']) &&
 			!preg_match($tel_exp,$tel_fixe)) {
 			$error_message .= 'Votre num&eacute;ro de t&eacute;l&eacute;phone fixe semble invalide.<br />';
@@ -91,7 +89,7 @@ if(isset($_POST['envoi_mail'])) {
 				return str_replace($bad,"",$string);
 			}
 
-			$email_message  = "Bonjour,\n\nCoordonnées fournies par le demandeur :\n\n";
+			$email_message  = "Bonjour,\n\nInformations fournies par le demandeur :\n\n";
 			$email_message .= "Prénom : ".clean_string($prenom)."\n";
 			$email_message .= "Nom : ".clean_string($nom)."\n";
 			$email_message .= "Email : ".clean_string($email)."\n";

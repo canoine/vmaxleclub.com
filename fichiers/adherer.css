@@ -111,6 +111,11 @@ div.formulaire_champ_texte {
 	text-align: center;
 	height: 35px;
 }
+div.formulaire_champ_pg {
+	text-align: center;
+	display: none;
+	height: 35px;
+}
 div.formulaire_champ_vmax {
 	text-align: center;
 	height: 50px;

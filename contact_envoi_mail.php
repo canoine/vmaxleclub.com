@@ -3,13 +3,16 @@
 $error_message = "Aucune donn&eacute;e re&ccedil;ue.";
 
 if(isset($_POST['envoi_mail'])) {
-
     $email_to = "contact@vmaxleclub.com";
     $email_subject = "[Vmax le Club] Formulaire de contact";
-
 	$error_message = "";
 
-    // validation expected data exists
+    // Champ non vide -> robot -> poubelle
+    if(!empty($_POST['pg_email'])) {
+		header('Location: /');
+		die();
+    }
+    // Sinon, champ vide -> pas bien
     if(empty($_POST['nom'])) {
 		$error_message .= 'Vous devez indiquer votre nom.<br />';
     }
@@ -20,28 +23,25 @@ if(isset($_POST['envoi_mail'])) {
 		$error_message .= 'Vous devez indiquer votre adresse email.<br />';
     }
     if(empty($_POST['message'])) {
-		$error_message .= 'Vous n’avez rien &agrave; dire ?<br />';
+		$error_message .= 'Vous n’avez vraiment rien &agrave; dire ?<br />';
     }
 
 	if(empty($error_message)) {
-
 		// On a tous les champs voulus
 		$nom			= $_POST['nom'];
 		$prenom 		= $_POST['prenom'];
 		$email_addr		= $_POST['email'];
 		$emessage		= $_POST['message'];
 
+		// Quelques tests de forme
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 		$string_exp = "/^[\pL\pM\p{Zs}.-]+$/u";
 		$number_exp = "/^[0-9]+$/";
 		$tel_exp = "/^\+?[0-9]+$/";
 
-
-		// Quelques tests de forme
 		if(!preg_match($email_exp,$email_addr)) {
 			$error_message .= 'Votre adresse email semble invalide.<br />';
 		}
-
 		if(!preg_match($string_exp,$nom)) {
 			$error_message .= 'Votre nom semble invalide.<br />';
 		}
@@ -50,15 +50,25 @@ if(isset($_POST['envoi_mail'])) {
 		}
 
 		if(empty($error_message)) {
-			function clean_string($string) {
-				$bad = array("content-type","bcc:","to:","cc:","href");
-				return str_replace($bad,"",$string);
+			// URLs -> poubelle
+			if(preg_match('/(http|https|ftp):\/\//', $emessage)) {
+				header('Location: /');
+				die();
+			}
+			// Chteumeuleu -> poubelle
+			if(preg_match('/MIME-Version:|Content-Type:|Content-Transfer-Encoding:|href=/', $emessage)) {
+				header('Location: /');
+				die();
+			}
+			// Champs email -> poubelle
+			if(preg_match('/cc:|to:/', $emessage)) {
+				header('Location: /');
+				die();
 			}
 
-			$email_message  = "Bonjour,\n\nCoordonn&eacute;es fournies par le demandeur :\n\n";
-			$email_message .= "Pr&eacute;nom : ".clean_string($prenom)."\n";
+			$email_message  = "Nom : ".$prenom." ".$nom."\n";
 			$email_message .= "--\n";
-			$email_message .= "Message : ".clean_string($emessage)."\n";
+			$email_message .= "Message :\n".$emessage."\n";
 
 			// create email headers
 			$headers =	'From: '.$email_addr."\r\n".
@@ -66,6 +76,7 @@ if(isset($_POST['envoi_mail'])) {
 						'X-Mailer: PHP/' . phpversion();
 			if (mail($email_to, $email_subject, $email_message, $headers)) {
 				header('Location: contact_mail_ok.html');
+				die();
 			}
 			$error_message .= 'Donn&eacute;es non envoy&eacute;es.<br />';
 		}
