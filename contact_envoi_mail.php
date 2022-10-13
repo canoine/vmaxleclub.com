@@ -67,11 +67,13 @@ if(isset($_POST['envoi_mail'])) {
 			}
 
 			$email_message  = "Nom : ".$prenom." ".$nom."\n";
+			$email_message .= "Email : ".$email_addr."\n";
 			$email_message .= "--\n";
-			$email_message .= "Message :\n".$emessage."\n";
+			$email_message .= $emessage."\n";
 
 			// create email headers
-			$headers =	'From: '.$email_addr."\r\n".
+			$headers =	'From: '.$email_to."\r\n".
+						'Reply-to: '.$email_addr."\r\n".
 						'Content-Type: text/plain; charset=utf-8'."\r\n" .
 						'X-Mailer: PHP/' . phpversion();
 			if (mail($email_to, $email_subject, $email_message, $headers)) {
